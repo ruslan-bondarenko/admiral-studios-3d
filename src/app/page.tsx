@@ -2,6 +2,7 @@ import React from "react";
 import { ProductList } from "@/widgets";
 import { getProductsData } from "@/shared";
 import { headers } from "next/headers";
+import { ThreeModel } from "@/components";
 
 const Home = async () => {
   const headersList = await headers();
@@ -11,17 +12,12 @@ const Home = async () => {
   const products = await getProductsData(`${protocol}://${domain}`);
 
   return (
-    <main className="p-4 pt-10 md:p-10">
-      <div className="flex flex-col items-center mb-10">
-        <h3 className="text-xs md:text-m font-medium uppercase">
-          WELCOME TO OUR STORE
-        </h3>
-        <h1 className="font-lora text-4xl md:text-5xl font-medium">
-          WHERE SLOW FASHION MEETS LUXURY
-        </h1>
+    <main className="bg-radial from-gray-200 from-50% to-gray-400">
+      <div className="w-full h-screen">
+        <ThreeModel />
       </div>
 
-      {products?.length ? (
+      {/* {products?.length ? (
         <ProductList products={products} />
       ) : (
         <div className="px-8 py-6 bg-warn rounded-xl flex flex-col border">
@@ -33,7 +29,7 @@ const Home = async () => {
             Please check back later or explore other sections of our website.
           </p>
         </div>
-      )}
+      )} */}
     </main>
   );
 };

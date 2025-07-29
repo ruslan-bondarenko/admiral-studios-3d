@@ -19,17 +19,17 @@ const NavBar: FC<Props> = ({ className }) => {
   return (
     <ul
       className={clsx(
-        "hidden sm:flex items-center gap-4 text-sm text-gray-100 text-m",
+        "hidden sm:flex items-center gap-10 text-sm text-gray-100 text-m",
         className
       )}
     >
       {NAV_LINKS.map((nl, index) => (
         <li
           key={nl.label + index}
-          className="hover:text-tone-700 transition-all ease-linear"
+          className="hover:text-tone-700 transition-all ease-linear uppercase "
           onClick={() => closeMenu()}
         >
-          <Link href={nl.link}>{nl.label}</Link>
+          <Link className="font-700" href={nl.link}>{nl.label}</Link>
         </li>
       ))}
 

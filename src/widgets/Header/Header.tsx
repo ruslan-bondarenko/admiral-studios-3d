@@ -13,7 +13,8 @@ import {
   BurgerButton,
   MenuContainer,
 } from "@/shared/ui";
-import { Logo } from "@/shared/assets";
+import logo from "@/shared/assets/icons/logo.avif";
+
 import { useAppSelector } from "@/base/store";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
@@ -34,12 +35,12 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <header className="bg-black w-full flex items-center px-10 py-3 flex items-center justify-between">
+    <header className="fixed z-[99999] bg-[#020202] w-full flex items-center px-10 py-3 flex items-center justify-between">
       <Link
         className="flex items-center justify-center w-fit text-gray-100 hover:text-tone-700 "
         href="/"
       >
-        Admiral Studios
+        <Image className="w-full h-6" src={logo} alt="Back arrow" />
       </Link>
       <NavBar />
       <div className="hidden sm:flex">

@@ -31,6 +31,7 @@ module.exports = {
           600: '#ffdc2e',
           700: '#ffd500',
         },
+        primary: '#002c5f',
       },
       spacing: {
         '6.5': '1.625rem',
