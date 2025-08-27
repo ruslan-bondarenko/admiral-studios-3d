@@ -87,7 +87,7 @@ const ThreeModel = () => {
       />
       <ambientLight intensity={0.5} />
 
-      <ScrollControls pages={3} damping={0.25}>
+      <ScrollControls pages={3} damping={1}>
         <AnimatedKona />
         <Overlay />
       </ScrollControls>
