@@ -61,7 +61,8 @@ module.exports = {
         '3xl': '120rem', // 1920px
       },
       fontFamily: {
-        lora: ['Lora', 'serif'],
+        lora: ['Lora', 'sans-serif'],
+        space: ['Space Grotesk', 'sans-serif'],
       },
       fontSize: {
         '2xs': [

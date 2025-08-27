@@ -5,9 +5,8 @@ import { useState } from "react";
 const Section = (props: any) => {
   return (
     <section
-      className={`h-screen flex flex-col justify-center p-10 ${
-        props.right ? "items-end" : "items-start"
-      }`}
+      className={`h-screen flex flex-col justify-center p-10 ${props.right ? "items-end" : "items-start"
+        }`}
       style={{
         opacity: props.opacity,
       }}
@@ -39,35 +38,41 @@ const Overlay = () => {
     <Scroll html>
       <div className="w-screen">
         <Section opacity={opacityFirstSection}>
-          <h1 className="font-semibold font-serif text-2xl">
-            Hyundai Kona 2020
-          </h1>
-          <p>Imagine KONA in your everyday life.</p>
+          <div className="flex flex-col gap-2">
+            <h1 className="font-semibold text-2xl">
+              Hyundai Kona 2020
+            </h1>
+            <p className="text-gray-500">Imagine KONA in your everyday life.</p>
+          </div>
         </Section>
 
         <Section right opacity={opacitySecondSection}>
-          <p className="text-gray-500">
-            A Sporty and Aerodynamic Look from the Front to the Rear
-          </p>
-          <p>
-            KONA’s design features, such as its aerodynamic nose, wheel arch
-            cladding, and rugged skid plate, create a more active driving
-            experience while also ensuring energy efficiency through the active
-            air flap's ventilation system with an engine coolant temperature
-            sensor that regulates air flow.
-          </p>
+          <div className="flex flex-col gap-2">
+            <h3 className="font-semibold font-serif text-2xl">
+              A Sporty and Aerodynamic Look from the Front to the Rear
+            </h3>
+            <p className="text-gray-500">
+              KONA’s design features, such as its aerodynamic nose, wheel arch
+              cladding, and rugged skid plate, create a more active driving
+              experience while also ensuring energy efficiency through the active
+              air flap's ventilation system with an engine coolant temperature
+              sensor that regulates air flow.
+            </p>
+          </div>
         </Section>
 
         <Section opacity={opacityLastSection}>
-          <h3 className="font-semibold font-serif text-2xl">
-            Meet the Entire Lineup of The all-new KONA
-          </h3>
-          <p className="text-gray-500">
-            Meet the bolder, more dynamic, EV-led design KONA with unique
-            styling across a range of powertrains. : the all-electric (EV),
-            hybrid electric (HEV), internal combustion engine (ICE), and sporty
-            N LIne.
-          </p>
+          <div className="flex flex-col gap-2">
+            <h3 className="font-semibold font-serif text-2xl">
+              Meet the Entire Lineup of The all-new KONA
+            </h3>
+            <p className="text-gray-500">
+              Meet the bolder, more dynamic, EV-led design KONA with unique
+              styling across a range of powertrains. : the all-electric (EV),
+              hybrid electric (HEV), internal combustion engine (ICE), and sporty
+              N LIne.
+            </p>
+          </div>
         </Section>
       </div>
     </Scroll>

@@ -35,7 +35,7 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <header className="fixed z-[99999] bg-[#020202] w-full flex items-center px-10 py-3 flex items-center justify-between">
+    <header className="fixed z-[99999] bg-[#020202] w-full flex items-center px-10 py-3 flex items-center justify-between font-lora">
       <Link
         className="flex items-center justify-center w-fit text-gray-100 hover:text-tone-700 "
         href="/"
