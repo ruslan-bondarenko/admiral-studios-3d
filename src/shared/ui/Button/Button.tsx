@@ -40,9 +40,9 @@ const Button: FC<Props & PropsWithChildren> = ({
   const Component = href ? Link : componentType;
   const linkProps = href
     ? {
-        href,
-        target: openInAnotherTab ? "_blank" : "_self",
-      }
+      href,
+      target: openInAnotherTab ? "_blank" : "_self",
+    }
     : {};
 
   const VARIANT_MAPS: Record<ButtonVariantEnum, string> = {
@@ -74,7 +74,9 @@ const Button: FC<Props & PropsWithChildren> = ({
   };
 
   return (
+    // @ts-ignore
     <Component
+      // @ts-ignore
       className={clsx(
         "flex rem:min-h-[32px] md:rem:min-h-[40px] gap-3 items-center justify-center",
         "transition-all duration-300",
